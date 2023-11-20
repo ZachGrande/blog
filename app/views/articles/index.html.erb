@@ -1,6 +1,10 @@
 <h1>Hello, Rails!</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
+<% if Article.public_count == 1 %>
+  <p>Our blog has 1 article and counting!</p>
+<% else %>
+  <p>Our blog has <%= Article.public_count %> articles and counting!</p>
+<% end %>
 
 <ul class="list-group-flush">
   <% @articles.each do |article| %>
