@@ -2,14 +2,14 @@
 
 Our blog has <%= Article.public_count %> articles and counting!
 
-<ul>
+<ul class="list-group-flush">
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-      <li>
+      <li class="list-group-item">
         <%= link_to article.title, article %>
       </li>
     <% end %>
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path, class: "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %>
